@@ -1,0 +1,12 @@
+{
+    "id": "HomeHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "tid": "T1348654105308",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

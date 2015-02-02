@@ -1,0 +1,11 @@
+{
+    "id": "LocalNewsHeader",
+    "entries": [
+        {
+            "type": "header",
+            "params": {
+                "tid":"T008"
+            }
+        }
+    ]
+}

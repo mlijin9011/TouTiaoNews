@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  TouTiaoNews
+
+  Created by LiJin on 15/1/29.
+  Copyright (c) 2015年 User. All rights reserved.
+*/
+"tab_dynamic" = "动态";
+"tab_home" = "新闻";
+"tab_mine" = "我的";
+
+"news_channel_wangyi" = "网易新闻";
+"news_tag_dujia" = "独家";
+"news_tag_shipin" = "视频";
+"news_tag_yuyin" = "语音";
+"news_skiptype_special" = "专题";
+"news_skiptype_photoset" = "图集";
+"news_skiptype_live" = "Live";

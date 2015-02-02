@@ -1,0 +1,21 @@
+{
+    "id":"Caipiao",
+    "entries":[
+        {
+            "type":"sidebarBlock",
+            "params":{
+                "title":"彩票",
+                "icon":"icon",
+                "icon_setting":"icon",
+                "class":"helper"
+            }
+        },
+	{
+            "type":"header",
+            "params":{
+                "tid":"T1356600029035",
+                "viewHeight": 61
+            }
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TTNewsChannel" representedClassName="TouTiaoNews.TTNewsChannel" syncable="YES">
+        <attribute name="ename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headLine" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="recommend" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="recommendOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TTNewsChannel" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>

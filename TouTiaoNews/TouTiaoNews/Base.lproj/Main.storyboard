@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z2n-7X-OMs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bTI-Gk-8Is">
+            <objects>
+                <navigationController id="z2n-7X-OMs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gwc-Gv-dhc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78431372549019607" green="0.15686274509803921" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mjm-bY-eXp" kind="relationship" relationship="rootViewController" id="IHO-a0-Obv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHu-1w-53F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176" y="324"/>
+        </scene>
+        <!--动态-->
+        <scene sceneID="dWT-dQ-QBm">
+            <objects>
+                <viewController id="Gd7-0H-Zbi" customClass="DynamicViewController" customModule="TouTiaoNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="znf-xs-dgt"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUh-H1-igz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CQG-Ko-ryF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="动态" image="dynamic_tabbar.png" selectedImage="dynamic_tabbar_press.png" id="8cB-IN-0vo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSu-8o-u3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="324"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="uXQ-N6-p4F">
+            <objects>
+                <viewController id="ifH-LD-eGw" customClass="MineViewController" customModule="TouTiaoNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GlS-WI-f2i"/>
+                        <viewControllerLayoutGuide type="bottom" id="iSR-pe-BIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tUb-Fc-chH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="mine_tabbar.png" selectedImage="mine_tabbar_press.png" id="o9W-Pg-lvn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gis-kt-xGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="1111"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="yjR-zP-gmp">
+            <objects>
+                <viewController id="Zfe-Xk-yVJ" customClass="HomeViewController" customModule="TouTiaoNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OBw-bH-RoC"/>
+                        <viewControllerLayoutGuide type="bottom" id="0a2-l6-cxT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDZ-EZ-vcb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home_tabbar.png" selectedImage="home_tabbar_press.png" id="3Ph-Vl-9Cr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX2-fd-bj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-411"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="hRq-LJ-Akk">
+            <objects>
+                <tabBarController id="Mjm-bY-eXp" customClass="TTTabBarViewController" customModule="TouTiaoNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="VKw-Mf-rgY"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="vO5-1m-qF0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedImageTintColor">
+                                <color key="value" red="0.92156862745098034" green="0.0" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zfe-Xk-yVJ" kind="relationship" relationship="viewControllers" id="3qp-vR-sF7"/>
+                        <segue destination="Gd7-0H-Zbi" kind="relationship" relationship="viewControllers" id="BfD-G0-USU"/>
+                        <segue destination="ifH-LD-eGw" kind="relationship" relationship="viewControllers" id="Efs-SY-FcY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kus-92-3hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dynamic_tabbar.png" width="22" height="22"/>
+        <image name="dynamic_tabbar_press.png" width="22" height="22"/>
+        <image name="home_tabbar.png" width="22" height="22"/>
+        <image name="home_tabbar_press.png" width="22" height="22"/>
+        <image name="mine_tabbar.png" width="22" height="22"/>
+        <image name="mine_tabbar_press.png" width="22" height="22"/>
+    </resources>
+</document>

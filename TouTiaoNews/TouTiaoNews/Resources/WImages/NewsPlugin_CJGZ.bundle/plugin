@@ -1,0 +1,20 @@
+{
+    "id":"CJGZ",
+    "entries":[
+        {
+            "type":"header",
+            "params":{
+                "tid":"T1348648756099",
+                "viewHeight":75
+            }
+        },
+        {
+            "type":"link",
+            "params":{
+                "regex":[
+                    ".*\\.money\\.163\\.com/.*stock/.*\\.html$"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "id":"ApplyToCover",
+    "entries":[
+        {
+            "type":"sidebarBlock",
+            "params":{
+                "title":"上封面",
+                "icon":"icon",
+                "icon_setting":"icon",
+                "class":"helper"
+            }
+        },
+        {
+            "type":"link",
+            "params":{
+                "regex":[
+                    "http\\://m\\.163\\.com/special/newsclient/sfm\\.html$"
+                ]
+            }
+        }
+    ]
+}

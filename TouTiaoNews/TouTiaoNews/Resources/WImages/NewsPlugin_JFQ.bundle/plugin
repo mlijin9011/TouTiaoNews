@@ -1,0 +1,22 @@
+{
+    "id": "JFQ",
+    "entries": [
+        {
+            "type": "mission",
+            "params": {
+                "title": "安装应用",
+                "missionScoreMin": 10,
+                "missionScoreMax": 30,
+                "missionScoreType": "coin"
+            }
+        },
+        {
+            "type":"link",
+            "params":{
+                "regex":[
+                    "http\\://3g\\.163\\.com/.*/appscorewall\\.html$"
+                ]
+            }
+        }
+    ]
+}
