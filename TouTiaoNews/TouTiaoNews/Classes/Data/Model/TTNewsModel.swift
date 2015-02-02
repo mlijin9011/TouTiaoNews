@@ -64,11 +64,11 @@ class TTNewsModel : NSObject {
                 if (needTop) {
                     model.viewType = TTNewsModelViewType.Top
                 }
-            } else if (model.skipType == "photoset") {
-                model.viewType = TTNewsModelViewType.PhotoSet
-                if (dic.indexForKey("imgextra") != nil) {
-                    let photos = dic["imgextra"] as? Array<Dictionary<String, String>>
-                    model.photosets?.append(model.imgsrc!)
+            } else if (dic.indexForKey("imgextra") != nil) {
+                let photos = dic["imgextra"] as? Array<Dictionary<String, String>>
+                model.photosets?.append(model.imgsrc!)
+                if (photos != nil) {
+                    model.viewType = TTNewsModelViewType.PhotoSet
                     for photoDic in photos! {
                         model.photosets?.append(photoDic["imgsrc"]!)
                     }
@@ -80,6 +80,15 @@ class TTNewsModel : NSObject {
             } else if (dic.indexForKey("template") != nil && ((dic["template"] as? String) == "manual")) {
                 if (needTop) {
                     model.viewType = TTNewsModelViewType.Top
+                }
+            } else if (dic.indexForKey("imgextra") != nil) {
+                let photos = dic["imgextra"] as? Array<Dictionary<String, String>>
+                model.photosets?.append(model.imgsrc!)
+                if (photos != nil) {
+                    model.viewType = TTNewsModelViewType.PhotoSet
+                    for photoDic in photos! {
+                        model.photosets?.append(photoDic["imgsrc"]!)
+                    }
                 }
             }
         }

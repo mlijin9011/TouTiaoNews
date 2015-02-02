@@ -39,6 +39,7 @@ class TTNewsPageView : UIView, UITableViewDataSource, UITableViewDelegate, DataM
     }
     
     func getNewsList(currentChannel: TTNewsChannel) {
+//        MBProgressHUD .showHUDAddedTo(self, animated: true)
         DataManager.sharedInstance.delegate = self
         DataManager.sharedInstance.getNewsListAsync(currentChannel, pageNumber: 0)
     }
@@ -70,7 +71,7 @@ class TTNewsPageView : UIView, UITableViewDataSource, UITableViewDelegate, DataM
             var headerView: TTNewsHeaderView?
             if (cell == nil) {
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentify)
-                headerView = TTNewsHeaderView(frame: CGRect(x: 0, y: 0, width: cell!.bounds.width, height: 180))
+                headerView = TTNewsHeaderView(frame: CGRect(x: 0, y: 0, width: cell!.bounds.width, height: 200))
                 headerView!.tag = 100001
                 cell!.addSubview(headerView!)
             } else {
@@ -98,7 +99,7 @@ class TTNewsPageView : UIView, UITableViewDataSource, UITableViewDelegate, DataM
     // MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.section == 0) {
-            return 180
+            return 200
         }
 
         return self.cellHeightForNewsModel(self.dataSource![indexPath.row + 1] as TTNewsModel)
@@ -108,7 +109,7 @@ class TTNewsPageView : UIView, UITableViewDataSource, UITableViewDelegate, DataM
         if (model.viewType == TTNewsModelViewType.PhotoSet) {
             return 120
         } else if (model.viewType == TTNewsModelViewType.Editor) {
-            return 200
+            return 190
         }
         return 80
     }

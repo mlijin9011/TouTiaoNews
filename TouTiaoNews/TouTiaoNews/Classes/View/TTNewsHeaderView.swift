@@ -27,11 +27,8 @@ class TTNewsHeaderView : UIView {
         
         self.imageView = UIImageView(frame: CGRectZero)
         self.imageView!.contentMode = UIViewContentMode.ScaleAspectFill
+        self.imageView!.clipsToBounds = true
         self.addSubview(self.imageView!)
-        
-        var subView = UIView(frame: CGRect(x: 0, y: self.bounds.height - 30, width: self.bounds.width, height: 30))
-        subView.backgroundColor = UIColor.whiteColor()
-        self.addSubview(subView)
         
         self.tagImageView = UIImageView(frame: CGRectZero)
         self.tagImageView!.contentMode = UIViewContentMode.Center
@@ -39,7 +36,7 @@ class TTNewsHeaderView : UIView {
         
         self.titleLabel = UILabel(frame: CGRectZero)
         self.titleLabel!.textAlignment = NSTextAlignment.Left
-        self.titleLabel!.font = self.titleLabel!.font.fontWithSize(13)
+        self.titleLabel!.font = self.titleLabel!.font.fontWithSize(14)
         self.addSubview(self.titleLabel!)
     }
     
@@ -49,31 +46,42 @@ class TTNewsHeaderView : UIView {
     
     func setModel(model: TTNewsModel) {
         self.imageView!.sd_setImageWithURL(NSURL(string: model.imgsrc!), placeholderImage: UIImage(named: "big_loadpic_empty_listpage"))
-        self.imageView!.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height - 30)
+        self.imageView!.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height - 35)
         
         self.titleLabel!.text = model.title
         
+        model.skipType = ""
+        model.tag = ""
         if !model.skipType!.isEmpty {
-            self.titleLabel!.frame = CGRect(x: 10 + 16 + 10, y: self.bounds.height - 30, width: self.bounds.width - 36 - 10, height: 30)
             if (model.skipType == "photoset") {
                 self.tagImageView!.image = UIImage(named: "cell_tag_photo")
-            } else if (model.tag == "special") {
-                
-            } else if (model.tag == "live") {
-                
+                self.tagImageView!.frame = CGRect(x: 10, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 10 + 16 + 6, y: self.bounds.height - 28, width: self.bounds.width - 32 - 10, height: 20)
+            } else if (model.skipType == "special") {
+                self.tagImageView!.image = UIImage(named: "contentview_special")
+                self.tagImageView!.frame = CGRect(x: 15, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 15 + 16 + 12, y: self.bounds.height - 28, width: self.bounds.width - 43 - 10, height: 20)
+            } else if (model.skipType == "live") {
+                self.tagImageView!.image = UIImage(named: "contentview_live")
+                self.tagImageView!.frame = CGRect(x: 15, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 15 + 16 + 12, y: self.bounds.height - 28, width: self.bounds.width - 43 - 10, height: 20)
             }
         } else if !model.tag!.isEmpty {
-            self.titleLabel!.frame = CGRect(x: 10 + 16 + 10, y: self.bounds.height - 30, width: self.bounds.width - 36 - 10, height: 30)
             if (model.tag == NSLocalizedString("news_tag_dujia", comment: "")) {
-                
+                self.tagImageView!.image = UIImage(named: "contentview_dujia")
+                self.tagImageView!.frame = CGRect(x: 15, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 15 + 16 + 12, y: self.bounds.height - 28, width: self.bounds.width - 43 - 10, height: 20)
             } else if (model.tag == NSLocalizedString("news_tag_shipin", comment: "")) {
                 self.tagImageView!.image = UIImage(named: "cell_tag_video")
+                self.tagImageView!.frame = CGRect(x: 10, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 10 + 16 + 6, y: self.bounds.height - 28, width: self.bounds.width - 32 - 10, height: 20)
             } else if (model.tag == NSLocalizedString("news_tag_yuyin", comment: "")) {
                 self.tagImageView!.image = UIImage(named: "cell_tag_audio")
+                self.tagImageView!.frame = CGRect(x: 10, y: self.bounds.height - 26, width: 16, height: 16)
+                self.titleLabel!.frame = CGRect(x: 10 + 16 + 6, y: self.bounds.height - 28, width: self.bounds.width - 32 - 10, height: 20)
             }
         } else {
-            self.titleLabel!.frame = CGRect(x: 10, y: self.bounds.height - 30, width: self.bounds.width - 10 - 10, height: 30)
+            self.titleLabel!.frame = CGRect(x: 10, y: self.bounds.height - 28, width: self.bounds.width - 10 - 10, height: 20)
         }
-        self.tagImageView!.frame = CGRect(x: 10, y: self.bounds.height - 30 + 7, width: 16, height: 16)
     }
 }
